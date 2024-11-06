@@ -1,13 +1,22 @@
 # Data-analysis
 
-I used PRAW, gathered real-time data form reddit.
-tested the api on r/radoihead.
+This project uses PRAW to gather real-time data from Reddit and applies machine learning models to predict various metrics.
 
-I then used ml models like KNeighboursClassifier and SVC on the r/mildlyinteresting subreddit.
-The change in subreddit due to a more stable predictable subreddit.
+## Models Used
 
-The metrics used are ['comments', 'upvotes', 'sentiment','crossposts']
-to predict upvote_ratio in KNeighboursClassifier which gives a respectable accuracy of 0.805
+1. K-Nearest Neighbors (KNN)
+    - Goal: Predict upvote ratio
+    - Features: `['comments', 'upvotes', 'sentiment', 'crossposts']`
+    - Accuracy: 0.805
 
-The metrics used for SVC are ['comments', 'upvotes', 'upvote_ratio']
-to predict sentiment with accuracy of 0.61 (low due to unpredictability of redditors).
+3. Support Vector Classifier (SVC)
+    - Goal: Predict sentiment
+    - Features: `['comments', 'upvotes', 'upvote_ratio']`
+    - Accuracy: 0.61 (lower due to unpredictable Reddit behavior)
+
+## Key Metrics
+- Comments
+- Upvotes
+- Sentiment
+- Crossposts
+- Upvote Ratio
